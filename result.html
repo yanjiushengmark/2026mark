@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2026研究生入学考试成绩查询结果</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 30px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result-card {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 防伪斜纹背景 */
+        .result-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(21, 93, 252, 0.02) 0px,
+                rgba(21, 93, 252, 0.02) 10px,
+                rgba(21, 93, 252, 0.04) 10px,
+                rgba(21, 93, 252, 0.04) 20px
+            );
+            transform: rotate(30deg);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* 内容层（在防伪背景之上） */
+        .result-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #155dfc;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #155dfc;
+            font-size: 28px;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .header .exam-date {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* 表格样式 */
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .result-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px 20px;
+            font-size: 15px;
+        }
+
+        .result-table .label {
+            background: #f8faff;
+            font-weight: 600;
+            color: #333;
+            width: 35%;
+        }
+
+        .result-table .value {
+            color: #155dfc;
+            font-weight: 500;
+            background: white;
+        }
+
+        .result-table .full-row {
+            background: #f0f7ff;
+            text-align: center;
+            font-weight: 600;
+            color: #155dfc;
+            letter-spacing: 1px;
+        }
+
+        /* 成绩高亮 */
+        .score-highlight {
+            font-size: 24px;
+            font-weight: 700;
+            color: #155dfc;
+        }
+
+        .score-detail {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 底部按钮 */
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #155dfc;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0e4ad0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(21, 93, 252, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #155dfc;
+            border: 1px solid #155dfc;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f7ff;
+            transform: translateY(-2px);
+        }
+
+        /* 防伪水印文字 */
+        .watermark {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 12px;
+            color: rgba(21, 93, 252, 0.1);
+            font-weight: bold;
+            transform: rotate(-15deg);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* 证书编号 */
+        .cert-no {
+            text-align: right;
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-card">
+        <!-- 防伪水印文字 -->
+        <div class="watermark">OFFICIAL • CERTIFIED • VERIFIED</div>
+
+        <!-- 头部信息 -->
+        <div class="header">
+            <h1>2026研究生入学考试成绩</h1>
+
+        </div>
+
+        <!-- 考生信息表格（符合你的要求：第一行两格，第二行一格，第三四五行两格） -->
+        <table class="result-table">
+            <tr>
+                <td class="label">考生姓名</td>
+                <td class="value">杨子雄</td>
+            </tr>
+            <tr>
+                <td class="label" colspan="2" style="text-align: center;">准考证号：202602140001</td>
+            </tr>
+            <tr>
+                <td class="label">身份证号码</td>
+                <td class="value">342401200104148179</td>
+            </tr>
+            <tr>
+                <td class="label">报考院校</td>
+                <td class="value">南京大学</td>
+            </tr>
+            <tr>
+                <td class="label">报考专业</td>
+                <td class="value">人工智能</td>
+            </tr>
+
+        </table>
+
+        <!-- 成绩信息表格 -->
+        <table class="result-table">
+            <tr>
+                <td class="label">基本练习</td>
+                <td class="value">88<span class="score-detail">/优秀</span></td>
+            </tr>
+            <tr>
+                <td class="label">练习曲</td>
+                <td class="value">85<span class="score-detail">/良好</span></td>
+            </tr>
+            <tr>
+                <td class="label">复调作品</td>
+                <td class="value">82<span class="score-detail">/良好</span></td>
+            </tr>
+            <tr>
+                <td class="label">奏鸣曲</td>
+                <td class="value">90<span class="score-detail">/优秀</span></td>
+            </tr>
+            <tr>
+                <td class="label">中外乐曲</td>
+                <td class="value">87<span class="score-detail">/优秀</span></td>
+            </tr>
+            <tr class="full-row">
+                <td class="label" style="background: #155dfc; color: white;">总评成绩</td>
+                <td class="value" style="background: #155dfc; color: white; font-weight: 700;">86.4分 / 优秀</td>
+            </tr>
+        </table>
+
+        <!-- 证书编号 -->
+        <div class="cert-no">
+            证书编号：CCOM-2026-0214-0888 | 防伪码：8866 9933 2244 5577
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="buttons">
+            <a href="index.html" class="btn btn-secondary">返回查询</a>
+            
+        </div>
+    </div>
+
+    <script>
+        // 可以在这里添加动态获取准考证号的逻辑
+        // 目前是静态演示，所有数据都是写死的
+    </script>
+</body>
+</html>

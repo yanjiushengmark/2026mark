@@ -614,19 +614,42 @@ document.addEventListener('DOMContentLoaded', function () {
                     
                     <!-- 说明文字 -->
                     
-                    
+                    <!-- 查询表单 - 用 form 实现跳转 -->
+<!--                        <form action="result.html" method="get" style="width: 100%; max-width: 400px;">-->
+<!--                            <div style="margin-bottom: 15px; text-align: left;">-->
+<!--                                <div style="color: #666; margin-bottom: 8px;">准考证号</div>-->
+<!--                                <input type="text" name="id" placeholder="请输入准考证号" required-->
+<!--                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; box-sizing: border-box;">-->
+<!--                            </div>-->
+
+<!--                            <button type="submit" style="width: 100%; background: #155dfc; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer;">-->
+<!--                                查询-->
+<!--                            </button>-->
+<!--                        </form>-->
                     <!-- 查询表单 -->
-                    <div style="width: 100%; max-width: 400px;">
-                        <div style="margin-bottom: 15px; text-align: left;">
-                            <div style="color: #666; margin-bottom: 8px;">准考证号</div>
-                            <input type="text" placeholder="请输入准考证号" 
-                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
-                        </div>
-                        
-                        <button style="width: 100%; background: #155dfc; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer;">
-                            查询
-                        </button>
-                    </div>
+                    <!-- 查询表单 - 单纯跳转，不传编号 -->
+                            <form action="result.html" style="width: 100%; max-width: 400px;">
+                                <div style="margin-bottom: 15px; text-align: left;">
+                                    <div style="color: #666; margin-bottom: 8px;">准考证号</div>
+                                    <input type="text" placeholder="请输入准考证号" required
+                                           style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; box-sizing: border-box;">
+                                </div>
+
+                                <button type="submit" style="width: 100%; background: #155dfc; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer;">
+                                    查询
+                                </button>
+                            </form>
+<!--                    <div style="width: 100%; max-width: 400px;">-->
+<!--                        <div style="margin-bottom: 15px; text-align: left;">-->
+<!--                            <div style="color: #666; margin-bottom: 8px;">准考证号</div>-->
+<!--                            <input type="text" placeholder="请输入准考证号" -->
+<!--                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; box-sizing: border-box;">-->
+<!--                        </div>-->
+<!--                        -->
+<!--                        <button style="width: 100%; background: #155dfc; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer;">-->
+<!--                            查询-->
+<!--                        </button>-->
+<!--                    </div>-->
                     
                     <!-- 提示文字 -->
                     <p style="margin-top: 20px; color: #999; font-size: 14px;">* 请输入正确的准考证号进行查询</p>
